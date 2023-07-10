@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
  import 'get_started_screen.dart';
  import 'package:flutter_app/commons/reusable_button.dart';
+import 'package:flutter_app/screens/signup.dart';
 class LogoScreen extends StatelessWidget {
   const LogoScreen({super.key});
 
@@ -27,13 +28,13 @@ class LogoScreen extends StatelessWidget {
                 ),
                 
                 Text("FOOD CENTER", style: TextStyle(color: Colors.orange, fontWeight: FontWeight.bold,fontSize:20, letterSpacing:3) ),
-                 SizedBox(height:70),
+                 SizedBox(height:100),
                  ReusableButton(
   buttonText: 'Started',
   onPressed: () {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => GetStartedScreen()),
+      MaterialPageRoute(builder: (context) => signup()),
     );
   },
 )
