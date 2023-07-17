@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
-import 'login.dart';
+import 'item_screen.dart';
 class Homescreen extends StatelessWidget {
   const Homescreen ({super.key});
 
   @override
   Widget build(BuildContext context) {
     final Size size=MediaQuery.of(context).size;
-    return Scaffold(
+    final String text='';
+    final int price=0;
+    final String image='';
+    final String des='';
+        return Scaffold(
       appBar: AppBar(backgroundColor: Colors.orange,
     
       title: const Text('                       MENU CART          ',
@@ -29,10 +32,7 @@ class Homescreen extends StatelessWidget {
               leading: Icon(Icons.home),
               title: const Text('login page'),
               onTap: (){
-                Navigator.pop(context, 
-                                
-                                  
-                                    );
+                Navigator.pop(context);
               },
             ),
             ListTile(
@@ -41,9 +41,7 @@ class Homescreen extends StatelessWidget {
             ),
             title: const Text('signup page'),
             onTap: (){
-              Navigator.pop(context,
-                                  
-                                    );
+              Navigator.pop(context);
             },
             ),
 
@@ -73,7 +71,16 @@ class Homescreen extends StatelessWidget {
                         child:
                           
                            InkWell(
-                            onTap:(){             
+                            onTap:(){ 
+                                 Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Fried Rice",
+                                    price:3000,
+                                    image:"assets/friedrice.jpg",
+                                    des:"This classic Veg Fried Rice recipe is made with a hearty mix of fresh vegetables, green onions, seasonings and spices for an incredibly"
+                                      )));         
                             }, 
                             
                             child:
@@ -86,7 +93,17 @@ class Homescreen extends StatelessWidget {
                         Column(
                           children: [
                             ElevatedButton(
-      onPressed: (){},
+      onPressed: (){
+        Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Fried Rice",
+                                    price:3000,
+                                    image:"assets/friedrice.jpg",
+                                    des:"This classic Veg Fried Rice recipe is made with a hearty mix of fresh vegetables, green onions, seasonings and spices for an incredibly"
+                                      )));
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.orange,
         shape: RoundedRectangleBorder(
@@ -116,7 +133,17 @@ class Homescreen extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(bottom: 40, left: 15),
-                          child: InkWell(onTap:(){},
+                          child: InkWell(onTap:(){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Mancho Soup",
+                                    price:2000,
+                                    image:"assets/mancho.jpg",
+                                    des:"This vegan soup is spicy, with a thick broth, yummy fried noodles and a bunch of different stir fried vegetables"
+                                      )));
+                          },
                             child: Image.asset('assets/mancho.jpg',height: 70,width: 120,),
 
                           
@@ -128,7 +155,17 @@ Column(
   mainAxisAlignment: MainAxisAlignment.start,
   children:[
           ElevatedButton(
-      onPressed: (){},
+      onPressed: (){
+        Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Mancho Soup",
+                                    price:2000,
+                                    image:"assets/mancho.jpg",
+                                    des:"This vegan soup is spicy, with a thick broth, yummy fried noodles and a bunch of different stir fried vegetables"
+                                      )));
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.orange,
         shape: RoundedRectangleBorder(
@@ -156,7 +193,17 @@ Column(
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(bottom: 40,left: 15),
-                          child: InkWell(onTap:(){},
+                          child: InkWell(onTap:(){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Noodles",
+                                    price:2000,
+                                    image:"assets/noodels.jpg",
+                                    des:"Made with noodles of choice, some basic vegetables, a hint of black pepper and your favorite sauce"
+                                      )));
+                          },
                           child: Image.asset('assets/noodels.jpg',height: 70,width: 120,),
                           ),
                         ),
@@ -166,7 +213,17 @@ Column(
   mainAxisAlignment: MainAxisAlignment.end,
   children:[
          ElevatedButton(
-      onPressed: (){},
+      onPressed: (){
+        Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Noodles",
+                                    price:2000,
+                                    image:"assets/noodels.jpg",
+                                    des:"Made with noodles of choice, some basic vegetables, a hint of black pepper and your favorite sauce"
+                                      )));
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.orange,
         shape: RoundedRectangleBorder(
@@ -195,7 +252,17 @@ Column(
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(bottom: 40, left: 15),
-                          child: InkWell(onTap:(){},
+                          child: InkWell(onTap:(){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Wok Special",
+                                    price:3000,
+                                    image:"assets/wokspecial.jpg",
+                                    des:"Asian Wok Special Chow Mein! Chinese noodles stir-fried with Prawns, Chicken, Bamboo Shoots, Black Mushroom, seasoned with hot Spices."
+                                      )));
+                          },
                           child: Image.asset('assets/wokspecial.jpg',height: 70,width: 120,),
                           ),
                         ),
@@ -206,7 +273,17 @@ Column(
   mainAxisAlignment: MainAxisAlignment.start,
   children:[
            ElevatedButton(
-      onPressed: (){},
+      onPressed: (){
+        Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen (
+                                    text:"Wok Special",
+                                    price:3000,
+                                    image:"assets/wokspecial.jpg",
+                                    des:"Asian Wok Special Chow Mein! Chinese noodles stir-fried with Prawns, Chicken, Bamboo Shoots, Black Mushroom, seasoned with hot Spices."
+                                      )));
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.orange,
         shape: RoundedRectangleBorder(
