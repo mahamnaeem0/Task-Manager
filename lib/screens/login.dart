@@ -62,8 +62,8 @@ class login extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen(
-                                  username: usernameCtrl.text,
+                                builder: (context) => Homescreen(
+                                  
                                     )));
                       }
                     },

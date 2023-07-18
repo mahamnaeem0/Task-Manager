@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'endscreen.dart';
 class ItemScreen extends StatefulWidget {
   const ItemScreen({super.key,required this.text,required this.price,required this.image,required this.des});
 final String text;
@@ -70,10 +71,34 @@ class _ItemScreen extends State<ItemScreen> {
                   child: Text("${widget.des}",style: TextStyle(color: Colors.black,fontSize: 16),)),
               ],
              ),
-             
-          ],
-         ),
+             Padding(padding: const EdgeInsets.only(bottom:70),),
+              ElevatedButton(
+      onPressed: (){
+        Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => endscreen(
+                        
+                                      )));
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.orange,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+        ),
       ),
+      child: Text(
+       "add to cart" ,
+        style: TextStyle(
+          fontSize: 12,
+          letterSpacing: 2,
+          color: Colors.white,
+        ),
+      ),
+          ),
+         ]
+      ),
+    ),
     );
   }
 }
